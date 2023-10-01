@@ -12,6 +12,9 @@ export class HeroImagePipe implements PipeTransform {
       return 'assets/no-image.png';
   }
 
+  if(hero.alt_img) return hero.alt_img;
+  
+
   return `assets/heroes/${hero.id}.jpg`;
 }
 
